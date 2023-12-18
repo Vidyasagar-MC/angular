@@ -1,0 +1,7 @@
+<form #f="ngForm">
+     <input type="text" #namebox="ngModel" [(ngModel)]="fname" name="forFormNameBox" required="">
+    <div [hidden]="namebox.valid" class="alert alert-danger">
+    value is required
+    </div>
+    <input type="submit" vlaue="submit the form"[disabled]="f.invalid || namebox.untouched"/>
+</form>

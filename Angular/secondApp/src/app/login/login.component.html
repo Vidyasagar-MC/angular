@@ -1,0 +1,5 @@
+<form [formGroup]="rForm">
+    <input type="email" formControlName="email" placeholder="enter email"/>
+    <input type="pwd" formControlName="pwd" placeholder="password"/>
+   <button (click)='showDashboard() '[disabled]="rForm.invalid">Login</button>
+</form>

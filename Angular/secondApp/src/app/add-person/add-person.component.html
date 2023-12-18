@@ -1,0 +1,72 @@
+<h2>Add a new Person</h2>
+<hr/>
+<h3>Using Interpolation Binding</h3>
+<h5>{{greeting}}</h5>
+<span>AppRating:{{5*2/2}}</span>
+<br/>
+<span>Calculate your agr as dog years:{{CalculateDogYears(25)}}</span>
+<br/>
+<hr/>
+Recently joined:{{p.name}} with aadhar no:{{p.aadhar}}, of age: {{p.age}} Joined.<br/>
+<hr/>
+<h3>Using [] Binding - Attribute/Directive Binding: TS -> HTML</h3>
+<span>Which state do you belong to?</span><input type="text" [value]="state" />
+<!--<button>Done</button> -->
+<button class="btn btn-primary"(click)="handleClick(state)">Done</button>
+<p>{{status}}</p>
+<hr/>
+<h3>Add the new Person usibg ngModel [()] bind</h3>
+<form>
+ <input type="text"  name="aadhar" class="form-control input" placeholder="Enter your aadhar No" [(ngModel)]="p.aadhar"/>
+ Value in code:{{p.aadhar}}
+ <br/>
+<input type="text" name="name" class="form-control" placeholder="Enter your name" [(ngModel)]="p.name"/>
+ Value in code:{{p.name}}
+ <br/>
+
+ <input type="number" name="age"  class="form-control" placeholder="Enter your age" [(ngModel)]="p.age"/>
+ Value in code:{{p.age}}
+<br/>
+
+ <input type="checkbox"  class="form-check-input" name ="isAlive" [(ngModel)]="p.isAlive"/>
+ Value in code:{{p.isAlive}}
+ <br/>
+
+ <button class="btn btn-success" (click)="addPerson(p.aadhar,p.name,p.age,p.isAlive)">Add</button>
+ <span>{{status}}</span>
+</form>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Male
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+     Female
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      Others
+    </label>
+  </div>
+<div style="height: 500px;" height="1500px"></div>
+<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  
+ 
+<table class="table-dark">Black Day</table>
+<div class="alert alert-danger" role="alert">
+    Emergency at KPMG office B1 !!!
+  </div>
+  <img src="https://th.bing.com/th?id=OSK.HEROmM-Kc91F4yCaCyAjsafSzEz-4Ck1N6QQjbp7VNSRvlk&w=472&h=280&c=1&rs=2&o=6&pid=SANGAM" class="img-fluid" alt="...">
+  
+
+
